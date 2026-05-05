@@ -6,7 +6,7 @@ A responsive, dark-themed personal portfolio website built from scratch using HT
 
 ## 🌐 Live Demo
 
-> [aditshah29.github.io](https://aditshah29.github.io) 
+> [aditshah29.github.io](https://aditshah29.github.io/Portfolio/) 
 
 ---
 

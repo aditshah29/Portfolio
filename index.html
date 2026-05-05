@@ -1,51 +1,122 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adit's Portfolio</title>
-    <link rel="stylesheet" href="./style-index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adit Shah — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style-index.css" />
 </head>
 <body>
-    <h1>Adit Shah's Portfolio</h1>
-    <h2>My Projects &darr;</h2>
-    <hr/><br>
-    <div id="x">
-    <a class="z" href="./public/birthday-invite.html">Birthday Invite Project</a>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">AS</span>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="./public/about.html">About</a>
+        <a href="./public/contact.html" class="nav-cta">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <br/>
-    <img id="a" src="./assets/images/Screenshot 2025-10-02 115658.png" height="300" width="400" alt="image"/><br/>
-    <hr/><br>
-    <div id="y">
-    <a class="z" href="https://aditshah29.github.io/Mahindra-BE6-Superman-Edition/">CSS Introduction Project</a>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#projects">Projects</a>
+      <a href="./public/about.html">About</a>
+      <a href="./public/contact.html">Contact</a>
     </div>
-    <br/>
-    <img id="b" src="./assets/images/BE6.png" alt="image" height="300" width="400">
-    
-    <footer>
-    <hr/><br>
-    <a class="p" href="./public/about.html">About Me</a>
-    <a class="p" href="./public/contact.html">Contact Me</a>
-    </footer>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">— Web Developer & CS Student</div>
+    <h1 class="hero-title">
+      <span class="reveal">Adit</span>
+      <span class="reveal delay-1"><em>Shah</em></span>
+    </h1>
+    <p class="hero-sub reveal delay-2">Building the web, one project at a time.</p>
+    <a href="#projects" class="hero-btn reveal delay-3">View Projects ↓</a>
+    <div class="hero-scroll-line"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section-label">// Projects</div>
+    <h2 class="section-title">What I've Built</h2>
+
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <article class="card" data-index="01">
+        <div class="card-img-wrap">
+          <img src="./assets/images/Screenshot 2025-10-02 115658.png" alt="Birthday Invite Project preview" />
+          <div class="card-overlay">
+            <a href="./public/birthday-invite.html" class="card-overlay-btn">Open Project →</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">HTML · CSS</span>
+          <h3 class="card-title">Birthday Invite</h3>
+          <p class="card-desc">A fun, styled birthday invitation page with custom fonts and vibrant layout.</p>
+          <a href="./public/birthday-invite.html" class="card-link">View project →</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-index="02">
+        <div class="card-img-wrap">
+          <img src="./assets/images/BE6.png" alt="Mahindra BE6 CSS project preview" />
+          <div class="card-overlay">
+            <a href="https://aditshah29.github.io/Mahindra-BE6-Superman-Edition/" target="_blank" rel="noopener" class="card-overlay-btn">Open Project →</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">HTML · CSS · Design</span>
+          <h3 class="card-title">Mahindra BE6 — Superman Edition</h3>
+          <p class="card-desc">CSS introduction project reimagining the Mahindra BE6 with a bold Superman theme.</p>
+          <a href="https://aditshah29.github.io/Mahindra-BE6-Superman-Edition/" target="_blank" rel="noopener" class="card-link">View project →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="about-strip-inner">
+      <div class="about-strip-text">
+        <div class="section-label">// About Me</div>
+        <h2>CS Student · Musician · Car Enthusiast</h2>
+        <p>I'm Adit Shah, studying computer engineering at MBIT. Passionate about <strong>Cybersecurity</strong> and <strong>Web Development</strong>. Outside of tech, I hold a Sangeet Visharad in Tabla Vaadan.</p>
+        <a href="./public/about.html" class="ghost-btn">Read More →</a>
+      </div>
+      <div class="about-strip-skills">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">JavaScript</div>
+        <div class="skill-pill">Cybersecurity</div>
+        <div class="skill-pill">Web Dev</div>
+        <div class="skill-pill">Tabla</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">Adit Shah</span>
+      <div class="footer-links">
+        <a href="./public/about.html">About</a>
+        <a href="./public/contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2025</span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->

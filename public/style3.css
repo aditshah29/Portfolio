@@ -1,17 +1,119 @@
-h1{
-    color: greenyellow;
-    text-align: center;
-    font-size: xx-large;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0b0b0f;
+  --surface: #131318;
+  --border: rgba(255,255,255,0.08);
+  --accent: #c8f064;
+  --text: #f0ede8;
+  --muted: #888682;
+  --card-bg: #17171d;
 }
-p{
-    text-align: center;
-    color: greenyellow;
-    font-family: 'Indie Flower';
-    font-size: x-large;
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.65;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
-html{
-    background-color: black;
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  justify-content: space-between;
 }
-div{
-    margin-top: 10%;
+.nav-logo {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
 }
+.nav-logo:hover { color: var(--text); }
+.nav-title {
+  font-size: 0.875rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  flex: 1;
+}
+
+.page-header { margin-bottom: 3.5rem; }
+
+.label {
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--text);
+  line-height: 1;
+}
+h1 em { color: var(--accent); font-style: italic; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.about-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.about-card:hover {
+  border-color: rgba(200,240,100,0.3);
+  transform: translateY(-4px);
+}
+
+.about-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-card h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.about-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.about-card strong { color: var(--text); font-weight: 500; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+footer a:hover { color: var(--accent); }
